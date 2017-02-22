@@ -16,7 +16,7 @@ compositor: compton
 ![scrot2] (scrot2.png)
 
 ##### In the scrots
-* Scrot 1p
+* Scrot 1
    * ncmpcpp (playlist)
    * cava
    * ncmpcpp (clock)
