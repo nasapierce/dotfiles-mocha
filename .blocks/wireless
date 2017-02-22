@@ -1,0 +1,9 @@
+#!/bin/bash
+
+wifi=$(iwgetid -r)
+
+if [ "$wifi" == "" ]; then
+  echo "No WiFi  "
+else
+  echo "${wifi}  "
+fi

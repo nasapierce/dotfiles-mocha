@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ "$(amixer get Master | grep off)" ]]; then
+  echo "mute "
+else
+  perc=$(amixer get Master | grep -i 'front left:' | cut -d'[' -f2 | cut -d']' -f1)
+  echo "$perc "
+fi

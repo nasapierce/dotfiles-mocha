@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#
+# ~/.blocks/network
+#
+
+ip=$(ip addr | grep wlo1 | grep inet | awk '{print $2}')
+ip=$(echo "${ip%???}")
+
+if [ "$ip" == "" ]; then
+  echo "No IP  "
+else
+  echo "${ip}  "
+fi

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#
+# ~/.blocks/wireless
+#
+
+wifi=$(iwgetid -r)
+
+if [ "$wifi" == "" ]; then
+  echo "No WiFi  "
+else
+  echo "${wifi}  "
+fi

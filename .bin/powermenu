@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Color directory
+CD="/home/nasa/.Xresources"
+
+# Fetch the Colors
+BG=$(cat ${CD} | grep -i background | tail -c 8)
+FG=$(cat ${CD} | grep -i foreground | tail -c 8)
+
+BLACK=$(cat ${CD} | grep -i color8 | tail -c 8)
+RED=$(cat ${CD} | grep -i color9 | tail -c 8)
+GREEN=$(cat ${CD} | grep -i color10 | tail -c 8)
+YELLOW=$(cat ${CD} | grep -i color11 | tail -c 8)
+BLUE=$(cat ${CD} | grep -i color12 | tail -c 8)
+MAGENTA=$(cat ${CD} | grep -i color13 | tail -c 8)
+CYAN=$(cat ${CD} | grep -i color14 | tail -c 8)
+WHITE=$(cat ${CD} | grep -i color15 | tail -c 8)
+
+# Panel 
+PW=300
+PH=48
+PX=533
+PY=372
+
+echo -e "%{c}%{F$FG}\uf011  %{A:p:}Shutdown%{A}  \uf021  %{A:r:}Reboot%{A}  %{A:s:}Suspend%{A}  \uf08b  %{A:b:}Exit%{A}  " \
+| lemonbar -g ${PW}x${PH}+${PX}+${PY} -f "terminus-8" -f "fontawesome-8" -B "$BG" -F "$FG" -dp | \
+    while :; do
+        read line
+        case $line in 
+            'b')
+                p=$(pgrep -n lemonbar)
+                kill $p 
+                exit 
+                ;;
+            's')
+                sudo /usr/sbin/pm-suspend &
+                p=$(pgrep -n lemonbar)
+                kill $p 
+                exit                
+                ;;
+            'p')
+                sudo /sbin/shutdown -h now
+                exit
+                ;;
+            'r')
+                sudo /sbin/shutdown -r now
+                exit
+                ;;
+        esac
+    done

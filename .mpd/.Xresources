@@ -1,0 +1,70 @@
+! 
+! ~/.Xresources
+!
+
+urxvt.geometry: 80x22
+urxvt.font:xft:Lemon:pixelsize=10
+urxvt.boldFont:xft:Lemon:bold:pixelsize=10
+urxvt.italicfont:xft:Lemon:italic:pixelsize=10
+urxvt.bolditalicFont:xft:Lemon:bold:italic:pixelsize=10
+urxvt*letterSpace: -2
+
+
+xft.autohint: true
+xft.antialias: true
+xft.hinting: true
+xft.hintstyle: hintslight
+xft.rgba: rgb
+xft.lcdfilter: lcddefault
+
+
+! disable the bell
+urxvt.insecure: false
+
+
+! urxvt scroll and cursor
+urxvt*saveLines: 2000
+urxvt*scrollBar: false
+urxvt*cursorBlink: true
+urxvt*cursorUnderline: true
+
+urxvt*depth: 32
+
+! urxvt colors
+! special
+*.foreground:   #d0c8c6
+*.background:   #3b3228
+*.cursorColor:  #d0c8c6
+
+! black
+*.color0:       #3b3228
+*.color8:       #7e705a
+
+! red
+*.color1:       #cb6077
+*.color9:       #cb6077
+
+! green
+*.color2:       #beb55b
+*.color10:      #beb55b
+
+! yellow
+*.color3:       #f4bc87
+*.color11:      #f4bc87
+
+! blue
+*.color4:       #8ab3b5
+*.color12:      #8ab3b5
+
+! magenta
+*.color5:       #a89bb9
+*.color13:      #a89bb9
+
+! cyan
+*.color6:       #7bbda4
+*.color14:      #7bbda4
+
+! white
+*.color7:       #d0c8c6
+*.color15:      #f5eeeb
+

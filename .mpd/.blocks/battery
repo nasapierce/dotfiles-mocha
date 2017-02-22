@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#
+# ~/.blocks/battery
+#
+
+FOLD="/sys/class/power_supply"
+
+# battery percentage
+if [ -d $FOLD/BAT0 ]; then
+  val=$( cat $FOLD/BAT0/capacity )
+fi
+
+echo -e "$val% "

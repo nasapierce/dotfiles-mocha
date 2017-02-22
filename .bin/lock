@@ -1,0 +1,4 @@
+#!/bin/bash
+scrot /tmp/screen.png
+ffmpeg -f x11grab -video_size 1366x768 -y -i $DISPLAY -filter_complex "boxblur=5:1" -vframes 1 /tmp/screen.png
+i3lock -i /tmp/screen.png -e -f

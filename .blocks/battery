@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FOLD="/sys/class/power_supply"
+
+if [ -d $FOLD/BAT0 ]; then
+  val=$( cat $FOLD/BAT0/capacity )
+fi
+
+echo -e "$val% "

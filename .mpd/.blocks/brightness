@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#
+# ~/.blocks/brightness
+#
+
+brightness=$(xbacklight)
+
+echo "${brightness%???????}%  "
+
