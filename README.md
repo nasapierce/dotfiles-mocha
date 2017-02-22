@@ -29,7 +29,7 @@ compositor: compton
 ### Thanks!
 I need to thank some people for sharing their dotfiles as I moved to Arch!
 Thanks to:
-[sliceofcode] (http://github.com/sliceofcode)
-[Airblader] (http://github.com/Airblader)
+* [sliceofcode] (http://github.com/sliceofcode)
+* [Airblader] (http://github.com/Airblader)
 
 Without you guys I would've been stuck with the ugly defaults for the rest of my life :)
